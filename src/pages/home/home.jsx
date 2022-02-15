@@ -37,6 +37,10 @@ class HomePage extends React.Component {
                     </div>
                     <img className='div-1b' src="foto2.png" alt="" />
                 </div>
+                <div>
+                    <div>image</div>
+                    <div>penjelasan</div>
+                </div>
                 
            </div>
        )
