@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Route, Routes } from 'react-router-dom'
+// import { connect } from 'react-redux'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// import pages
+import HomePage from './pages/home/home';
+// import Login from './pages/login/login';
+// import Patner from './pages/patner/patner';
+// import Register from './pages/register/register';
+// import Sylabus from './pages/sylabus/sylabus';
+
+class App extends React.Component {
+
+  render() {
+    return (
+      <div style={{ backgroundColor: '#A3DDCB' }}>
+        <Routes>
+          <Route>
+            <Route path="/" element={<HomePage/>} exact />
+            {/* <Route path="/login" element={<Login/>} />
+            <Route path="/register" element={<Register/>} />
+            <Route path="/sylabus" element={<Sylabus/>} />
+            <Route path="/patner" element={<Patner/>} /> */}
+            {/* <Route path="*" element={NotFound} /> */}
+          </Route>
+        </Routes>
+      </div>
+      // <div>hallo</div>
+    )
+  }
 }
 
 export default App;
